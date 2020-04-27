@@ -8,3 +8,14 @@ before_install:
 script:
   - docker run -e CI=true lacisoft/proj5-frontend npm run test -- --coverage
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "proj5-frontend"
+  env: "Proj5Frontend-env"
+  bucket_name: "elasticbeanstalk-us-east-1-113564655697"
+  bucket_path: "proj5-frontend"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
