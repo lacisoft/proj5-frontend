@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Yey! <code>src/App.js</code> works on Windows 10!!! SSs1!
+          Yey! <code>src/App.js</code> the app works
         </p>
         <a
           className="App-link"
