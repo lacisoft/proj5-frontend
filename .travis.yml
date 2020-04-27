@@ -1,0 +1,10 @@
+sudo: required
+language: generic
+services:
+  - docker
+before_install:
+  - docker build -t lacisoft/proj5-frontend -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true lacisoft/proj5-frontend npm run test
+
